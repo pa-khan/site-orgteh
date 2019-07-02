@@ -35,6 +35,11 @@
 						<div class="header__phone"><a href="tel:+70000000000">+7 (000) 000-00-00</a></div>
 					</div>
 					<nav class="header__nav">
+						<div class="header__hum hum">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 						<ul>
 							<li><a href="about.html">О сервисном центре</a></li>
 							<li><a href="services.html">Услуги</a></li>
@@ -44,11 +49,6 @@
 							<li><a href="contacts.html">Контакты</a></li>
 						</ul>
 					</nav>
-				</div>
-				<div class="header__hum hum">
-					<span></span>
-					<span></span>
-					<span></span>
 				</div>
 			</div>
 			<div class="hello">
@@ -72,8 +72,8 @@
 							<div class="hello__text">Продаём и покупаем <br>картриджи</div>
 						</div>
 					</div>
-					<div class="hello__col">
-						<a href="" class="hello__btn btn btn_border-white btn_hover-white btn_normal">Оставить заявку</a>
+					<div class="hello__col hello__col_btn">
+						<a data-fancybox data-src="#popup-order" href="javascript:;" class="hello__btn btn btn_border-white btn_hover-white btn_normal">Оставить заявку</a>
 					</div>
 				</div>
 			</div>
@@ -148,6 +148,20 @@
 			<div class="footer__copy">2019</div>
 		</div>
 	</footer>
+</div>
+
+
+<div class="popup popup_small" id="popup-order">
+	<div class="popup__title">Оставить заявку</div>
+	<div class="popup__wrap">
+		<div class="popup__input input input_border-white input_normal">
+			<input type="text" class="input__wrap" placeholder="Имя">
+		</div>
+		<div class="popup__input input input_border-white input_normal input_phone">
+			<input type="text" class="input__wrap" placeholder="Телефон">
+		</div>
+		<button class="popup__btn btn btn_border-white btn_normal">Отправить</button>
+	</div>
 </div>
 </body>
 </html>

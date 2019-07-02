@@ -151,7 +151,7 @@ input, .btn, .slick-slide, textarea
 
 
 .main-wrap
-	// overflow-x: hidden
+	overflow-x: hidden
 
 
 
@@ -353,16 +353,20 @@ input, .btn, .slick-slide, textarea
 		position: relative
 		padding-top: 50px
 		padding-bottom: 50px
-		&:before
+		&:before, &:after
 			content: ''
 			position: absolute
 			top: 0
 			bottom: 0
-			left: 0
 			width: 570px
 			background-color: #dcf1ff
+		&:before
+			left: 0
 			transform: translateX(-100%)
-
+		&:after
+			display: none
+			right: 0
+			transform: translateX(100%)
 	&__breadcrumbs
 		margin-bottom: 32px
 	&__nav
@@ -1025,6 +1029,7 @@ input, .btn, .slick-slide, textarea
 		color: #002b8b
 		position: relative
 		cursor: pointer
+		padding-right: 26px
 		&:before, &:after
 			display: block
 			content: ''
@@ -1105,6 +1110,31 @@ input, .btn, .slick-slide, textarea
 		font-size: 14px
 		
 
+
+
+.popup
+	font-family: $font-family-1
+	padding: 25px
+	color: #fff
+	background-color: #002b8b
+	border-radius: 4px
+	&_small
+		width: 320px
+	&__title
+		font-size: 24px
+		font-weight: 700
+		text-align: center
+		margin-bottom: 20px
+		color: #fff
+	&__input
+		margin-bottom: 20px
+
+	&__btn
+		width: 100%
+
+	.fancybox-close-small
+		color: #fff
+		
 
 .hidden-lg
 	display: none

@@ -68,4 +68,22 @@ $(document).ready(function($) {
 			body.slideDown(500);
 		}
 	});
+
+
+
+	var nav = $('.header__nav ul'),
+			hum = $('.hum'),
+			humClass = 'hum_toggle';
+
+	hum.click(function(event) {
+		hum.toggleClass(humClass);
+		nav.slideToggle(300);
+	});
+
+	$(window).on('resize load', function(event) {
+		if($(window).width()>=767){
+			nav.removeAttr('style');
+			hum.removeClass(humClass);
+		} 
+	});
 });
