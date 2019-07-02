@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>ORG Service</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+	<header class="header">
+		<div class="case">
+			<div class="header__wrap row">
+				<a href="index.html" class="header__logo logo">
+					<div class="logo__img"><img src="upload/logo.png" alt=""></div>
+					<div class="logo__title">ремонт <br>и обслуживание оргтехники</div>
+				</a>
+				<div class="header__content">
+					<div class="header__contacts row i-mid">
+						<div class="header__address">г. Москва, ул. Краснобогатырская, дом 42, офис 414</div>
+						<div class="header__phone"><a href="tel:+70000000000">+7 (000) 000-00-00</a></div>
+					</div>
+					<nav class="header__nav">
+						<ul>
+							<li><a href="about.html">О сервисном центре</a></li>
+							<li><a href="services.html">Услуги</a></li>
+							<li><a href="price.html">Прайс-лист</a></li>
+							<li><a href="faq.html">Частые вопросы</a></li>
+							<li><a href="guarantee.html">Гарантии</a></li>
+							<li class="selected"><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__hum hum">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="main">
+		<div class="page">
+			<div class="case">
+				<div class="page__case row i-top">
+					<aside class="page__aside">
+						<div class="page__breadcrumbs breadcrumbs">
+							<ul>
+								<li><a href="index.html">Главная</a></li>
+								<li>Контакты</li>
+							</ul>
+						</div>
+						<div class="page__nav">
+							<ul>
+								<li><a href="diagnostics.html">Ремонт принтеров</a></li>
+								<li><a href="mfy.html">Ремонт МФУ</a></li>
+								<li><a href="refueling.html">Заправка картриджей</a></li>
+								<li><a href="sale.html">Продажа картриджей</a></li>
+								<li><a href="purchase.html">Скупка картриджей</a></li>
+								<li><a href="restored.html">Восстановление картриджей</a></li>
+								<li><a href="fax.html">Ремонт факсов</a></li>
+								<li><a href="repairs.html">Ремонт копировальных аппаратов (ксероксов)</a></li>
+								<li><a href="comp.html">Обслуживание серверов и компьютерной техники</a></li>
+								<li><a href="firmware.html">Прошивка принтеров</a></li>
+							</ul>
+						</div>
+					</aside>
+					<section class="page__section">
+						<div class="page__title">Контакты и доставка</div>
+						<div class="page__wrap text">
+							<div class="contacts">
+								<div class="contacts__text text">
+									<h4>Наш центральный офис расположен по адресу:</h4>
+									<p>Москва, ул. Краснобогатырская д. 42, в здании института ОАО "НИИР".</p>
+								</div>
+								<div class="contacts__map map">
+									<div id="map"></div>
+									<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+									<script>
+										ymaps.ready(function () {
+								    var myMap = new ymaps.Map('map', {
+								            center: [55.808569, 37.704691],
+								            zoom: 16,
+								            controls: []
+								        }, {
+								            searchControlProvider: 'yandex#search'
+								        }),
+
+								        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+								            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+								        ),
+
+								        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+								            iconLayout: 'default#image',
+								            iconImageHref: 'upload/marker.png',
+								            iconImageSize: [26, 39],
+								            iconImageOffset: [-13, -39]
+								        })
+
+
+								    myMap.geoObjects.add(myPlacemark)
+										});
+									</script>
+								</div>
+								<h2 class="mt-more">Условия доставки товаров</h2>
+								<ul class="lines">
+									<li>Доставка товаров <br>по Москве (в пределах <br>МКАД) — 300 ₽</li>
+									<li>Доставка за МКАД — <br>300 ₽ + 15 ₽/км</li>
+									<li>Доставка по России (по ценам <br>транспортных компаний). Доставка грузов <br>до ТК по ценам доставки по Москве</li>
+								</ul>
+								<h2 class="mt-more">Реквизиты</h2>
+								<div class="uls row">
+									<ul>
+										<li>Адрес: 107564, г. Москва, </li>
+										<li>ул. Краснобогатырская, дом 42, офис 414</li>
+										<li>Расч. Счет  40702810438090005325 ОАО «Сбербанк России» г. Москва</li>
+										<li>Кор счет 30101810400000000225</li>
+										<li>БИК 044525225</li>
+										<li>ИНН 7718795677</li>
+										<li>КПП 771801001</li>
+									</ul>
+									<ul>
+										<li>ОКПО 65243908</li>
+										<li>ОКОГУ 49013</li>
+										<li>ОКАТО 45263552000</li>
+										<li>ОКТМО 45301000</li>
+										<li>ОКФС 16</li>
+										<li>ОКОПФ 65</li>
+										<li>ОКВЭД 51.7</li>
+										<li>ОГРН 1107746105719</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="case">
+			<div class="footer__title">Контакты</div>
+			<div class="footer__wrap row">
+				<div class="footer__col">
+					<p>тел.: <a href="tel:+74952121938">+7 (495) 212-1938</a>, <a href="tel:+74959281960">928-1960</a></p>
+					<p>E-mail: <a href="mailto:mosgorexpress@gmail.com">mosgorexpress@gmail.com</a></p>
+				</div>
+				<div class="footer__col">
+					<p>тел.: <a href="tel:+74952121938">+7 (495) 212-1938</a>, <a href="tel:+74959281960">928-1960</a></p>
+					<p>E-mail: <a href="mailto:mosgorexpress@gmail.com">mosgorexpress@gmail.com</a></p>
+				</div>
+				<div class="footer__col">
+					<p>Адрес нашего офиса:</p>
+					<p>Москва, ул. Большая Полянка</p>
+				</div>
+			</div>
+			<div class="footer__copy">2019</div>
+		</div>
+	</footer>
+</div>
+</body>
+</html>
