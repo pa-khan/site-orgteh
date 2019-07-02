@@ -1218,7 +1218,8 @@ input, .btn, .slick-slide, textarea {
   color: #fff;
   background-color: #002b8b;
   -webkit-border-radius: 4px;
-          border-radius: 4px; }
+          border-radius: 4px;
+  display: none; }
   .popup_small {
     width: 320px; }
   .popup__title {
